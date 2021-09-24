@@ -2,6 +2,7 @@ import Product from "../Product/Product";
 import "./Shop.css";
 import Summary from "../Summary/Summary";
 import { useState, useEffect } from "react";
+import { addToDb } from "../../Utilities/LocalStorage";
 
 const Shop = () => {
   const [products, setproducts] = useState([]);
@@ -16,6 +17,8 @@ const Shop = () => {
   const handleAddToCart = product => {
     let newCount = [...summery, product];
     setSummery(newCount);
+
+    addToDb(product.key);
   };
 
   return (
