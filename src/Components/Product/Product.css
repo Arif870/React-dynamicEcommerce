@@ -21,6 +21,7 @@
 .product p {
   color: orangered;
   font-size: 18px;
+  z-index: 9;
 }
 .stock {
   color: rgb(49, 131, 90);
