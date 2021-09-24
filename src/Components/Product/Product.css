@@ -18,8 +18,9 @@
   margin: 10px 0px;
   font-size: 30px;
 }
-.product p i {
+.product p {
   color: orangered;
+  font-size: 18px;
 }
 .stock {
   color: rgb(49, 131, 90);

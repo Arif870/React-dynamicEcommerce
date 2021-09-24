@@ -2,7 +2,7 @@ import Product from "../Product/Product";
 import "./Shop.css";
 import Summary from "../Summary/Summary";
 import { useState, useEffect } from "react";
-import { addToDb } from "../../Utilities/LocalStorage";
+import { addToDb, getStoredCart } from "../../Utilities/LocalStorage";
 
 const Shop = () => {
   const [products, setproducts] = useState([]);
@@ -20,6 +20,11 @@ const Shop = () => {
 
     addToDb(product.key);
   };
+
+  useEffect(() => {
+    let loadCart = getStoredCart();
+    console.log(loadCart);
+  }, []);
 
   return (
     <div className="shop">
