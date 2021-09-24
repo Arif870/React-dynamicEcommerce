@@ -1,0 +1,50 @@
+.summary {
+  box-shadow: 0px 0px 6px #313d4134;
+  border-radius: 10px;
+  padding: 20px;
+  position: sticky;
+  top: 27.5%;
+}
+.summary h4 {
+  font-weight: 400;
+  text-align: center;
+  color: #282c34;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+.name :last-child,
+.price :last-child {
+  font-weight: 600;
+  font-size: 18px;
+}
+.summary h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0px;
+  color: orangered;
+  text-align: center;
+}
+.summary p {
+  line-height: 32px;
+  color: #282c34;
+}
+
+.summary-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.summary button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(49, 131, 90);
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  color: aliceblue;
+}

@@ -1,0 +1,23 @@
+.header {
+  padding: 15px 0px;
+  box-shadow: 0px 4px 6px #313d4134;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+.header img {
+  width: 80px;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .header-content {
+    width: 90%;
+  }
+}

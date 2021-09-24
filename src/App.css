@@ -1,0 +1,12 @@
+/* black: #282c34;
+blue: #61dafb; */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: 0px;
+}
+body {
+  margin: auto;
+  font-family: poppins;
+}

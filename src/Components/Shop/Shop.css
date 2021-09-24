@@ -1,0 +1,9 @@
+.shop {
+  display: grid;
+  grid-gap: 40px;
+  width: 80%;
+  margin: 50px auto;
+  justify-content: space-between;
+  align-items: flex-start;
+  grid-template-columns: 2fr 1fr;
+}

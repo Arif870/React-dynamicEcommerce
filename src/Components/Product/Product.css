@@ -1,0 +1,35 @@
+.product {
+  margin-top: 20px;
+  box-shadow: 0px 0px 6px #313d4134;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.product h1 {
+  font-size: 25px;
+  font-weight: 500;
+  color: #282c34;
+}
+.product h2 {
+  color: #282c34;
+  font-weight: 500;
+  margin: 10px 0px;
+  font-size: 30px;
+}
+.product p i {
+  color: orangered;
+}
+.stock {
+  color: rgb(49, 131, 90);
+}
+
+button {
+  background-color: rgb(49, 131, 90);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
