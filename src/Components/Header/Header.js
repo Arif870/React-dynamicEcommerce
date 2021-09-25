@@ -8,7 +8,6 @@ let Header = () => {
     <div className="header">
       <div className="header-content">
         <img src={Logo} alt="" />
-        <Search />
         <Cart />
       </div>
     </div>

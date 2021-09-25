@@ -7,11 +7,15 @@ import { addToDb, getStoredCart } from "../../Utilities/LocalStorage";
 const Shop = () => {
   const [products, setproducts] = useState([]);
   const [summery, setSummery] = useState([]);
+  const [displayProduct, setDisplayProduct] = useState([]);
 
   useEffect(() => {
     fetch("./products.JSON")
       .then(response => response.json())
-      .then(data => setproducts(data));
+      .then(data => {
+        setproducts(data);
+        setDisplayProduct(data);
+      });
   }, []);
 
   const handleAddToCart = product => {
@@ -21,16 +25,26 @@ const Shop = () => {
     addToDb(product.key);
   };
 
-  useEffect(() => {
-    let loadCart = getStoredCart();
-    console.log(loadCart);
-  }, []);
+  let changeHandaler = e => {
+    let searchText = e.target.value;
+    let matchedProduct = products.filter(product =>
+      product.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setDisplayProduct(matchedProduct);
+  };
 
   return (
     <div className="shop">
       <div>
-        <h1>Our latest products</h1>
-        {products.map(product => (
+        <div className="search">
+          <input
+            onChange={changeHandaler}
+            placeholder="Search Product"
+            type="text"
+          />
+          <button>Search</button>
+        </div>
+        {displayProduct.map(product => (
           <Product
             product={product}
             key={product.key}
